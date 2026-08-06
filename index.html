@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BlackVault V4</title>
+
+<meta name="theme-color" content="#00ff55">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- BOOT -->
+<!-- ========================= -->
+
+<div id="boot-screen">
+
+<img src="assets/boot1.png" id="boot-logo">
+
+<div id="loading">
+
+<p id="status">Initializing BlackVault...</p>
+
+<div id="barra-bg">
+<div id="barra"></div>
+</div>
+
+<p id="bootPorcentagem">0%</p>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- LOGIN -->
+<!-- ========================= -->
+
+<div id="login-screen">
+
+<div class="login-box">
+
+<h1>BLACKVAULT</h1>
+
+<p>SECURE ACCESS TERMINAL</p>
+
+<input id="senha" type="password" placeholder="Digite sua senha">
+
+<button id="entrar">LOGIN</button>
+
+<button id="resetar">RESET</button>
+
+<p id="mensagem"></p>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SYSTEM HACKED -->
+<!-- ========================= -->
+
+<div id="hack-screen">
+
+<h1>SYSTEM HACKED</h1>
+
+<p>ROOT ACCESS GRANTED</p>
+
+<div id="hack-loader">
+<div id="hack-fill"></div>
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- DASHBOARD -->
+<!-- ========================= -->
+
+<div id="dashboard">
+
+<header>
+
+<h1>BLACKVAULT</h1>
+
+<div id="saldo-box">
+
+<p>VAULT BALANCE</p>
+
+<h2 id="saldo">R$ 0</h2>
+
+<span id="popup-money">+R$770</span>
+
+</div>
+
+</header>
+
+<section id="progress">
+
+<h3>META PS5</h3>
+
+<div id="meta-bg">
+<div id="meta-fill"></div>
+</div>
+
+<div class="linha">
+
+<p id="porcentagemMeta">0%</p>
+
+<p id="ip">IP: 127.0.0.1</p>
+
+<p id="conexao">STATUS: CONNECTED</p>
+
+<p id="restante">Faltam R$ 6.190</p>
+
+</div>
+
+</section>
+
+<section id="estatisticas">
+
+<div class="card">
+<p>Saldo</p>
+<h2 id="cardSaldo">R$ 0</h2>
+</div>
+
+<div class="card">
+<p>Depósitos</p>
+<h2 id="cardDepositos">0</h2>
+</div>
+
+<div class="card">
+<p>Meta</p>
+<h2 id="cardMeta">0%</h2>
+</div>
+
+<div class="card">
+<p>Faltam</p>
+<h2 id="cardRestante">R$ 6.190</h2>
+</div>
+
+</section>
+
+<section id="cronograma">
+<h2>CRONOGRAMA</h2>
+</section>
+
+<section id="acoes">
+
+<button id="depositar">DEPOSITAR +770</button>
+
+<button id="bonus800">+800 (13º)</button>
+
+</section>
+
+</div>
+
+<!-- META -->
+
+<div id="goal-screen">
+
+<div class="goal-box">
+
+<h1>🎉 MISSÃO CONCLUÍDA</h1>
+
+<p>Meta de <strong>R$ 6.190</strong> alcançada!</p>
+
+<p>Agora é hora de comprar seu PS5.</p>
+
+<button id="fecharMeta">FECHAR</button>
+
+</div>
+
+</div>
+
+<div id="success-screen">
+
+    <img src="assets/misioncomplete.png" id="mission-image">
+
+    <h3 id="valorFinal">R$ 6.190</h3>
+
+    <button id="backTop">BACK TO TOP</button>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+</html>
+

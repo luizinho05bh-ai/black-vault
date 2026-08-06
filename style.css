@@ -1,0 +1,474 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+body{
+background:#000;
+color:#00ff55;
+overflow-x:hidden;
+}
+
+/* ===========================
+BOOT
+=========================== */
+
+#boot-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+
+#boot-logo{
+    box-shadow:
+        0 0 20px #00ff55,
+        0 0 40px rgba(0,255,85,.3);
+    width: 85%;
+    max-width: 340px;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+#loading{
+margin-top:20px;
+}
+width:85%;
+max-width:420px;
+text-align:center;
+}
+
+#status{
+margin-bottom:15px;
+font-size:18px;
+}
+
+#barra-bg{
+width:100%;
+height:12px;
+background:#1d1d1d;
+border-radius:20px;
+overflow:hidden;
+}
+
+#barra{
+width:0%;
+height:100%;
+background:#00ff55;
+transition:.2s;
+}
+
+#bootPorcentagem{
+margin-top:15px;
+font-size:18px;
+}
+
+/* ===========================
+LOGIN
+=========================== */
+
+#login-screen{
+display:none;
+position:fixed;
+width:100%;
+height:100%;
+background:#000;
+justify-content:center;
+align-items:center;
+}
+
+.login-box{
+width:90%;
+max-width:420px;
+padding:30px;
+border:1px solid #00ff55;
+text-align:center;
+border-radius:12px;
+}
+
+.login-box h1{
+margin-bottom:10px;
+}
+
+.login-box p{
+margin-bottom:20px;
+}
+
+.login-box input{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+background:#111;
+border:1px solid #00ff55;
+color:#00ff55;
+}
+
+.login-box button{
+width:100%;
+padding:14px;
+margin-top:10px;
+background:#00ff55;
+color:#000;
+border:none;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+} /* ===========================
+SYSTEM HACKED
+=========================== */
+
+#hack-screen{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9998;
+}
+
+#hack-screen h1{
+font-size:34px;
+margin-bottom:15px;
+}
+
+#hack-screen p{
+margin-bottom:25px;
+}
+
+#hack-loader{
+width:85%;
+max-width:420px;
+height:12px;
+background:#1d1d1d;
+border-radius:20px;
+overflow:hidden;
+}
+
+#hack-fill{
+width:0%;
+height:100%;
+background:#00ff55;
+}
+
+/* ===========================
+DASHBOARD
+=========================== */
+
+#dashboard{
+display:none;
+padding:20px;
+padding-bottom:80px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+header h1{
+font-size:26px;
+}
+
+#saldo-box{
+text-align:right;
+position:relative;
+}
+
+#saldo{
+font-size:32px;
+}
+
+#popup-money{
+position:absolute;
+right:0;
+top:-25px;
+opacity:0;
+transition:.4s;
+color:#00ff55;
+font-weight:bold;
+}
+
+/* ===========================
+META
+=========================== */
+
+#progress{
+margin-bottom:25px;
+}
+
+#meta-bg{
+width:100%;
+height:14px;
+background:#1d1d1d;
+border-radius:20px;
+overflow:hidden;
+margin:12px 0;
+}
+
+#meta-fill{
+width:0%;
+height:100%;
+background:#00ff55;
+transition:.4s;
+}
+
+.linha{
+display:flex;
+flex-direction:column;
+gap:8px;
+font-size:14px;
+}
+
+/* ===========================
+CARDS
+=========================== */
+
+#estatisticas{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.card{
+background:#111;
+border:1px solid #00ff55;
+padding:18px;
+border-radius:12px;
+text-align:center;
+}
+
+.card h2{
+margin-top:10px;
+font-size:24px;
+}/* ===========================
+CRONOGRAMA
+=========================== */
+
+#cronograma{
+margin-top:30px;
+}
+
+#cronograma h2{
+margin-bottom:15px;
+}
+
+.mes{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px;
+margin-bottom:10px;
+background:#111;
+border:1px solid #00ff55;
+border-radius:10px;
+transition:.3s;
+}
+
+.mes.concluido{
+background:#00ff55;
+color:#000;
+font-weight:bold;
+}
+
+/* ===========================
+AÇÕES
+=========================== */
+
+#acoes{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+#acoes button{
+padding:18px;
+font-size:18px;
+font-weight:bold;
+background:#00ff55;
+color:#000;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+#acoes button:hover{
+transform:scale(1.02);
+}
+
+/* ===========================
+TELA META
+=========================== */
+
+#goal-screen{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.goal-box{
+width:90%;
+max-width:420px;
+padding:35px;
+background:#111;
+border:2px solid #00ff55;
+border-radius:14px;
+text-align:center;
+}
+
+.goal-box h1{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.goal-box p{
+margin-bottom:15px;
+line-height:1.5;
+}
+
+.goal-box button{
+margin-top:20px;
+padding:15px 35px;
+background:#00ff55;
+color:#000;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}/* ===========================
+SUCCESS SCREEN
+=========================== */
+
+#success-screen{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+z-index:999999;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:30px;
+animation:fadeIn .4s ease;
+}
+
+#success-screen h1{
+font-size:42px;
+color:#00ff55;
+margin-bottom:10px;
+}
+
+#success-screen h2{
+font-size:30px;
+color:#fff;
+margin-bottom:20px;
+}
+
+#success-screen p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+#valorFinal{
+font-size:52px;
+font-weight:bold;
+color:#00ff55;
+margin-bottom:35px;
+}
+
+#backTop{
+padding:16px 35px;
+font-size:18px;
+font-weight:bold;
+background:#00ff55;
+color:#000;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+#backTop:hover{
+transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:scale(.95);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+/* ===========================
+RESPONSIVO
+=========================== */
+
+@media (max-width:600px){
+
+header{
+flex-direction:column;
+gap:20px;
+}
+
+#estatisticas{
+grid-template-columns:1fr;
+}
+
+#saldo{
+font-size:28px;
+}
+
+.goal-box{
+width:95%;
+}
+
+#success-screen h1{
+font-size:34px;
+}
+
+#valorFinal{
+font-size:40px;
+}
+#mission-image{
+width:90%;
+max-width:500px;
+margin-bottom:30px;
+display:block;
+}
